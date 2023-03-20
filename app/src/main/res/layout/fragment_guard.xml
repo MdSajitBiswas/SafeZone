@@ -1,0 +1,120 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/security"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/pinkCard"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:cardElevation="20dp"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/purple_500"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/textSos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:elevation="21dp"
+        android:text="SOS"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/pinkCard"
+        app:layout_constraintTop_toTopOf="@id/pinkCard" />
+
+    <TextView
+        android:id="@+id/sosMsg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:elevation="21dp"
+        android:text="In case of emergency, keep telling family members to contact me."
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/imageSos"
+        app:layout_constraintStart_toStartOf="@id/pinkCard"
+        app:layout_constraintTop_toBottomOf="@id/textSos" />
+
+    <ImageView
+        android:id="@+id/imageSos"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:elevation="21dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_sos"
+        app:layout_constraintBottom_toBottomOf="@id/pinkCard"
+        app:layout_constraintEnd_toEndOf="@id/pinkCard"
+        app:layout_constraintTop_toTopOf="@id/pinkCard" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/greenCard"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:cardElevation="20dp"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/green_500"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintTop_toBottomOf="@id/pinkCard" />
+
+    <TextView
+        android:id="@+id/textGuard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:elevation="21dp"
+        android:text="GUARD"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/greenCard"
+        app:layout_constraintTop_toTopOf="@id/greenCard" />
+
+
+    <TextView
+        android:id="@+id/guardMsg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:elevation="21dp"
+        android:text="Open when you are on a potentialy dangerous journey."
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/imageGuard"
+        app:layout_constraintStart_toStartOf="@id/greenCard"
+        app:layout_constraintTop_toBottomOf="@id/textGuard" />
+
+    <ImageView
+        android:id="@+id/imageGuard"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:elevation="21dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_guard"
+        app:layout_constraintBottom_toBottomOf="@id/greenCard"
+        app:layout_constraintEnd_toEndOf="@id/greenCard"
+        app:layout_constraintTop_toTopOf="@id/greenCard" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
