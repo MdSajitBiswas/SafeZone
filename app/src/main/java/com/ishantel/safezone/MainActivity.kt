@@ -14,22 +14,29 @@ class MainActivity : AppCompatActivity() {
         val bottomBar =findViewById<BottomNavigationView>(R.id.bottom_nav)
         bottomBar.setOnItemSelectedListener {
 
-            if (it.itemId==R.id.nav_guard){
-                inflateFragment(GuardFragment.newInstance())
-            }else if(it.itemId==R.id.nav_home){
-                inflateFragment(HomeFragment.newInstance())
-            }else if (it.itemId==R.id.nav_dashboard){
-                inflateFragment(DashboardFragment.newInstance())
-            }else if (it.itemId==R.id.nav_profile){
-                inflateFragment(ProfileFragment.newInstance())
-            }else{
-                inflateFragment(HomeFragment.newInstance())
+            when (it.itemId) {
+                R.id.nav_guard -> {
+                    inflateFragment(GuardFragment.newInstance())
+                }
+                R.id.nav_home -> {
+                    inflateFragment(HomeFragment.newInstance())
+                }
+                R.id.nav_dashboard -> {
+                    inflateFragment(DashboardFragment.newInstance())
+                }
+                R.id.nav_profile -> {
+                    inflateFragment(ProfileFragment.newInstance())
+                }
+                else -> {
+                    inflateFragment(HomeFragment.newInstance())
+                }
             }
 
 
 
             true
         }
+        bottomBar.selectedItemId ==R.id.nav_home
     }
 
     private fun inflateFragment(newInstance: Fragment) {
